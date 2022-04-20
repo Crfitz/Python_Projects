@@ -1,0 +1,32 @@
+print("\nTicket Prices")
+
+print("\nPlease enter your age(s), one at a time, \nto see the ticket prices.\n")
+print("(Type 'done' when finished)\n")
+
+cost = []
+while True:
+	age = input("Enter age: ")
+	if age == 'done':
+		break
+	else:
+		age = int(age)
+		if age <= 2:
+			price = int(0)
+			cost.append(0)
+			print(cost)
+		elif age >= 3 and age <=12:
+			price = int(10)
+			cost.append(price)
+			print(cost)
+		elif age > 12:
+			price = int(15)
+			cost.append(price)
+			print(cost)
+total = 0
+for price in cost:
+	total = total + int(price)
+if int(len(cost)) < int(2):
+	print(f"Total cost for {len(cost)} ticket is ${total}.\n")
+else:
+	print(f"Total cost for {len(cost)} tickets is ${total}.\n")
+print("Would you like to pay now?")
